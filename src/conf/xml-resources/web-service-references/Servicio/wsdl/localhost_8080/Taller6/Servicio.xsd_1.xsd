@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://capaServicio/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://capaServicio/">
+
+<xs:element name="agregarContactoServicioWeb" type="tns:agregarContactoServicioWeb"/>
+
+<xs:element name="agregarContactoServicioWebResponse" type="tns:agregarContactoServicioWebResponse"/>
+
+<xs:element name="busquedaAvanzada" type="tns:busquedaAvanzada"/>
+
+<xs:element name="busquedaAvanzadaResponse" type="tns:busquedaAvanzadaResponse"/>
+
+<xs:element name="busquedaSimple" type="tns:busquedaSimple"/>
+
+<xs:element name="busquedaSimpleResponse" type="tns:busquedaSimpleResponse"/>
+
+<xs:element name="editarContactoServicioWeb" type="tns:editarContactoServicioWeb"/>
+
+<xs:element name="editarContactoServicioWebResponse" type="tns:editarContactoServicioWebResponse"/>
+
+<xs:element name="eliminarContactoServicioWeb" type="tns:eliminarContactoServicioWeb"/>
+
+<xs:element name="eliminarContactoServicioWebResponse" type="tns:eliminarContactoServicioWebResponse"/>
+
+<xs:complexType name="agregarContactoServicioWeb">
+<xs:sequence>
+<xs:element name="nombreContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="apellidoContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="mailContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="telefonoContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreCiudad" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreEmpresa" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregarContactoServicioWebResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarContactoServicioWeb">
+<xs:sequence>
+<xs:element name="uid" type="xs:int"/>
+<xs:element name="nuevoNombreContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="nuevoApellidoContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="nuevoTelefonoContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="nuevoMailContacto" type="xs:string" minOccurs="0"/>
+<xs:element name="uidEmpresa" type="xs:int"/>
+<xs:element name="nuevoNombreEmpresa" type="xs:string" minOccurs="0"/>
+<xs:element name="uidCiudad" type="xs:int"/>
+<xs:element name="nuevoNombreCiudad" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarContactoServicioWebResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="busquedaSimple">
+<xs:sequence>
+<xs:element name="textoBusqueda" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="busquedaSimpleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="busquedaAvanzada">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+<xs:element name="mail" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="busquedaAvanzadaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarContactoServicioWeb">
+<xs:sequence>
+<xs:element name="uidContacto" type="xs:int"/>
+<xs:element name="uidEmpresa" type="xs:int"/>
+<xs:element name="uidCiudad" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarContactoServicioWebResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
